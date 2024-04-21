@@ -338,14 +338,13 @@ export default function MyTodo() {
 
       const response = await axios.post("/api/todos/addTodo", {
         todoTask: newTodo,
-        done: status,
       });
       if (response.status === 200) {
         fetchTodos();
         setNewTodo("");
       }
     } catch (error) {
-      console.error("Error adding todo:", error);
+      console.error("Error adding todo", error);
     } finally {
       setLoading(false); // Set loading to false after adding todo
     }
@@ -359,9 +358,9 @@ export default function MyTodo() {
         fetchTodos();
       }
     } catch (error) {
-      console.error("Error deleting todo:", error);
+      console.error("Error deleting todo", error);
     } finally {
-      setLoading(false); // Set loading to false after deleting todo
+      setLoading(false);
     }
   };
 
@@ -390,7 +389,7 @@ export default function MyTodo() {
 
   return (
     <div className="todo-container">
-      <h1 className="todo-title mx-auto">My Todo's</h1>
+      <h1 className="todo-title mx-auto">My Todo&apos;s</h1>
       <form onSubmit={handleSubmit} className="todo-form">
         <input
           type="text"

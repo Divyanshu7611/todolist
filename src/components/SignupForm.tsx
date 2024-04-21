@@ -1,9 +1,9 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-export default function signUpForm() {
+export default function SignUpForm() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
