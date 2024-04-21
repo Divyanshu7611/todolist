@@ -1,9 +1,9 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import todoModel from "../../../../models/Todo";
 import { ConnectMongoDB, DisconnectMongoDB } from "../../../../utils/dbConnect";
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
-export async function POST(request: Request) {
+export async function POST(request: NextRequest) {
   const { todoTask, done, id } = await request.json();
   try {
     await ConnectMongoDB();

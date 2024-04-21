@@ -6,7 +6,7 @@ import jwt from "jsonwebtoken";
 import { NextRequest, NextResponse } from "next/server";
 import { Cookie } from "next/font/google";
 
-export async function POST(request: Request, response: Response) {
+export async function POST(request: NextRequest) {
   const { email, password } = await request.json();
 
   const JwtKey = process.env.JWT_SECRET || "TodoApp";
