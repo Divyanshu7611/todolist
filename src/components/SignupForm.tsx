@@ -30,7 +30,7 @@ export default function SignUpForm() {
         body: JSON.stringify(formData),
       });
       if (response.ok) {
-        window.location.href = "/todoList";
+        window.location.href = "/todolist";
       } else {
         const data = await response.json();
         setError(data.message);
